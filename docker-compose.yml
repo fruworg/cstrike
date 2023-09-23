@@ -16,5 +16,3 @@ services:
       - ./configs/plugins.ini:/hlds/cstrike/addons/metamod/plugins.ini
     ports:
       - 27015:27015/udp
-    env_file:
-      - cstrike.env
