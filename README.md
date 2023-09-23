@@ -1,7 +1,7 @@
 # cstrike
-based on [this repo](https://github.com/AMXX4u/BasePack).
+Образ основан на [этом репозитории](https://github.com/AMXX4u/BasePack).
 
-## Установка
+## Развёртывание
 ```
 mkdir /opt/cstrike
 cd /opt/cstrike
