@@ -31,7 +31,7 @@ ADD https://github.com/AMXX4u/BasePack/releases/download/1.0.20/BasePack.zip /tm
 RUN unzip -o /tmp/BasePack.zip -d /hlds
 RUN chmod +x hlds_linux
 
-RUN touch cstrike/banned,listip.cfg
-RUN touch cstrike/banned,listip.cfg
+RUN touch cstrike/banned.cfg
+RUN touch cstrike/listip.cfg
 
 ENTRYPOINT ./hlds_run -game cstrike -strictportbind -ip 0.0.0.0 -port 27015 +sv_lan 0 +map de_dust2 -maxplayers 16
