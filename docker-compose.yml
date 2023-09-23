@@ -3,7 +3,7 @@ version: '3.7'
 services:
   cstrike:
     container_name: cstrike
-    image: cstrike
+    image: fruworg/cstrike:latest
     restart: unless-stopped
     command: >
       ./hlds_run -game cstrike -strictportbind -ip 0.0.0.0 -port 27015
