@@ -6,5 +6,5 @@
 mkdir /opt/cstrike
 cd /opt/cstrike
 git clone github.com/fruworg/cstrike
-docker clone up -d
+docker compose up -d
 ```
