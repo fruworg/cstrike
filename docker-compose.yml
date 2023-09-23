@@ -18,5 +18,6 @@ services:
       - ./configs/banned.cfg:/hlds/cstrike/banned.cfg
       - ./configs/plugins.ini:/hlds/cstrike/addons/metamod/plugins.ini
       - ./configs/amxx.cfg:/hlds/cstrike/addons/amxmodx/configs/amxx.cfg
+      - ./configs/users.ini:/hlds/cstrike/addons/amxmodx/configs/users.ini
     ports:
       - 27015:27015/udp
