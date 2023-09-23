@@ -1,5 +1,5 @@
 FROM i386/debian:bookworm
-	
+
 LABEL maintainer="im@fruw.org"
 
 ENV LANG en_US.utf8
@@ -9,7 +9,7 @@ RUN apt-get update && \
     apt-get -y install --no-install-recommends \
     ca-certificates \
     locales \
-    unzip 
+    unzip
 
 RUN localedef -c -i en_US -f UTF8 en_US.UTF8
 
@@ -34,4 +34,5 @@ RUN chmod +x hlds_linux
 RUN touch cstrike/banned.cfg
 RUN touch cstrike/listip.cfg
 
-ENTRYPOINT ./hlds_run -game cstrike -strictportbind -ip 0.0.0.0 -port 27015 +sv_lan 0 +map de_dust2 -maxplayers 16
+ENTRYPOINT ./hlds_run -game cstrike -strictportbind -ip 0.0.0.0 -port 27015 \
+  +sv_lan 0 +map de_dust2 -maxplayers 16 +localinfo amxx_cfg cstrike/addons/amxmodx
