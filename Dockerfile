@@ -34,6 +34,8 @@ RUN chmod +x hlds_linux
 RUN touch cstrike/banned.cfg
 RUN touch cstrike/listip.cfg
 
+RUN rm -rf /tmp/*
+
 EXPOSE 27015
 CMD ./hlds_run -game cstrike -strictportbind -ip 0.0.0.0 -port 27015 \
   +sv_lan 0 +map de_dust2 -maxplayers 10 +localinfo amxx_cfg cstrike/addons/amxmodx
