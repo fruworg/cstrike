@@ -22,8 +22,9 @@ RUN cp linux32/crashhandler.so linux32/steamservice.so
 RUN mkdir ~/.steam
 RUN ln -s /steamcmd/linux32/ ~/.steam/sdk32
 
-RUN ./steamcmd.sh +force_install_dir /hlds +login anonymous +app_update 90 +quit; exit 0
-RUN ./steamcmd.sh +force_install_dir /hlds +login anonymous +app_update 90 validate +quit
+RUN ./steamcmd.sh +force_install_dir /hlds +login anonymous +app_set_config 90 +mod cstrike +quit; exit 0
+RUN ./steamcmd.sh +force_install_dir /hlds +login anonymous +app_update 90 -beta steam_legacy +quit; exit 0
+RUN ./steamcmd.sh +force_install_dir /hlds +login anonymous +app_update 90 -beta steam_legacy validate +quit
 
 WORKDIR /hlds
 
