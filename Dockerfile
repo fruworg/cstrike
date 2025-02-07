@@ -27,12 +27,13 @@ RUN ./steamcmd.sh +force_install_dir /hlds +login anonymous +app_update 90 valid
 
 WORKDIR /hlds
 
-ADD https://github.com/AMXX4u/BasePack/releases/download/1.0.20/BasePack.zip /tmp
+ADD https://github.com/AMXX4u/BasePack/releases/download/2.0.0/BasePack.zip /tmp
 RUN unzip -o /tmp/BasePack.zip -d /hlds
 RUN chmod +x hlds_linux
 
 RUN touch cstrike/banned.cfg
 RUN touch cstrike/listip.cfg
 
-ENTRYPOINT ./hlds_run -game cstrike -strictportbind -ip 0.0.0.0 -port 27015 \
-  +sv_lan 0 +map de_dust2 -maxplayers 16 +localinfo amxx_cfg cstrike/addons/amxmodx
+EXPOSE 27015
+CMD ./hlds_run -game cstrike -strictportbind -ip 0.0.0.0 -port 27015 \
+  +sv_lan 0 +map de_dust2 -maxplayers 10 +localinfo amxx_cfg cstrike/addons/amxmodx
