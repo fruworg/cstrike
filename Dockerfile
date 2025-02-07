@@ -2,8 +2,8 @@ FROM i386/debian:bookworm
 
 LABEL maintainer="im@fruw.org"
 
-ENV LANG en_US.utf8
-ENV LC_ALL en_US.UTF-8
+ENV LANG=en_US.utf8
+ENV LC_ALL=en_US.UTF-8
 
 RUN apt-get update && \
     apt-get -y install --no-install-recommends \
