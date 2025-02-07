@@ -11,7 +11,7 @@ RUN apt-get update && \
     locales \
     unzip
 
-RUN localedef -c -i en_US -f UTF8 en_US.UTF8
+RUN localedef -c -i en_US -f UTF-8 en_US.UTF-8
 
 WORKDIR /steamcmd
 
