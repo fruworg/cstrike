@@ -27,7 +27,7 @@ RUN ./steamcmd.sh +force_install_dir /hlds +login anonymous +app_update 90 valid
 
 WORKDIR /hlds
 
-ADD https://github.com/AMXX4u/BasePack/releases/download/2.0.0/BasePack.zip /tmp
+ADD https://github.com/AMXX4u/BasePack/releases/download/2.0.0/BasePack.v2.0.0.zip /tmp
 RUN unzip -o /tmp/BasePack.zip -d /hlds
 RUN chmod +x hlds_linux
 
