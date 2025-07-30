@@ -5,7 +5,7 @@
 ```
 mkdir /opt/cstrike
 cd /opt/cstrike
-git clone github.com/fruworg/cstrike .
+git clone https://github.com/fruworg/cstrike .
 docker compose up -d
 ```
 
@@ -13,6 +13,6 @@ docker compose up -d
 ```
 mkdir /opt/cstrike
 cd /opt/cstrike
-git clone github.com/fruworg/cstrike .
+git clone https://github.com/fruworg/cstrike .
 docker build . --platform=linux/386 -t cstrike
 ```
