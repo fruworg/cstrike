@@ -7,7 +7,7 @@ services:
     command: >
       ./hlds_run -game cstrike -strictportbind -ip 0.0.0.0 -port 27015
       +sv_lan 0 -maxplayers 10 +localinfo amxx_cfg cstrike/addons/amxmodx
-    networks_mode: host
+    network_mode: host
     volumes:
       - ./configs/motd.txt:/hlds/cstrike/motd.txt
       - ./configs/server.cfg:/hlds/cstrike/server.cfg
